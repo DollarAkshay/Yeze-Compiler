@@ -8,16 +8,34 @@
     <title>YEZE Compiler</title>
 
 
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/codemirror.css">
+
+
 </head>
 
 <body>
+    <textarea id="code">
+a = [i for i in range(0, 10)]
+print a
+    </textarea>
 
-    <form action="runOutput.php" method="POST">
-        <input type="text" name="language" value="python"><br><br>
-        <textarea name="sourceCode" style="width: 800px; height: 300px">print("Hello")</textarea><br><br>
-        <textarea name="input" style="width: 800px; height: 100px">Sample Input</textarea><br><br>
-        <input type="submit"><br><br>
-    </form>
+    <!-- Scripts -->
+    <script src="js/codemirror/codemirror.js"></script>
+    <script src="js/codemirror/mode/python/python.js"></script>
+    <script src="js/codemirror/addon/edit/matchbrackets.js"></script>
+    <script>
+        var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+            mode: {
+                name: "python",
+                version: 2,
+                singleLineStringErrors: false
+            },
+            lineNumbers: true,
+            indentUnit: 4,
+            matchBrackets: true
+        });
+    </script>
 
 </body>
 
