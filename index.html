@@ -5,17 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Compiler></title>
+    <title>YEZE Compiler</title>
 
 
 </head>
 
 <body>
 
-    <form onsubmit="runOutput.php" method="POST">
-        <input type="text" name="language"><br><br>
-        <textarea name="sourceCode" style="width: 800px; height: 300px"></textarea><br><br>
-        <textarea name="input" style="width: 800px; height: 100px"></textarea><br><br>
+    <form action="runOutput.php" method="POST">
+        <input type="text" name="language" value="python"><br><br>
+        <textarea name="sourceCode" style="width: 800px; height: 300px">print("Hello")</textarea><br><br>
+        <textarea name="input" style="width: 800px; height: 100px">Sample Input</textarea><br><br>
         <input type="submit"><br><br>
     </form>
 

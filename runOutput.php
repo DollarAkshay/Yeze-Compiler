@@ -9,7 +9,7 @@
     echo("Language : ".$language."<br>");
     echo("Source Code : ".$sourceCode."<br>");
     echo("Input : ".$input."<br>");
-    echo("File Extension : ".$file_extension[$language]."<br>");
+    echo("File Extension : ".$file_extension[$language]."<br><br>");
 
     $folder = "sessions/".strval(time());
 
@@ -25,7 +25,12 @@
 
         // Run Docker
         shell_exec('powershell docker run --rm -v ${PWD}/'.$folder.':/home/usercode -w /home/usercode virtual_machine');
-        echo file_get_contents($folder."/output.txt");
+        while (!file_exists($folder."/output.txt")) {
+            sleep(1);
+        }
+        
+        echo "<b> Output : </b><br>";
+        echo "<pre style='background: #aaaaaa; padding: 0.5em; border-radius: 1em;'>".file_get_contents($folder."/output.txt")."</pre>";
 
     }
     else{
