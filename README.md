@@ -1,6 +1,6 @@
 # Yeze-Compiler
 
-The worlds easiest online compiler built with docker
+The worlds easiest online compiler built with docker, angular and material design
 
 ## Screenshot
 
