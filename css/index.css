@@ -69,7 +69,41 @@ body h5 {
     font-size: 1.5em;
 }
 
+.CodeMirror {
+    height: 100%;
+}
+
+#ide-wrapper {
+    margin: 2em;
+    padding: 0em;
+}
+
 #code-wrapper {
-    margin: auto;
+    padding: 0em;
+    margin: 0em;
     border: 1px solid #e0e0e0;
+}
+
+#code-editor-options {
+    padding: 1em;
+}
+
+#input-output-wrapper {
+    margin: 2em;
+    padding: 0em;
+}
+
+.sub-heading {
+    font-size: 2em;
+}
+
+#input-textarea {
+    min-height: 200px;
+    margin-top: 0.5em;
+}
+
+#output-pre {
+    margin-top: 0.5em;
+    padding: 0.5em;
+    background: #bdbdbd;
 }

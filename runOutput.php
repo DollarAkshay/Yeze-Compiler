@@ -6,10 +6,10 @@
     $sourceCode = isset($_POST['sourceCode']) ? $_POST['sourceCode'] : 'null';
     $input = isset($_POST['input']) ? $_POST['input'] : 'null';
 
-    echo("Language : ".$language."<br>");
-    echo("Source Code : ".$sourceCode."<br>");
-    echo("Input : ".$input."<br>");
-    echo("File Extension : ".$file_extension[$language]."<br><br>");
+    // echo("Language : ".$language."<br>");
+    // echo("Source Code : ".$sourceCode."<br>");
+    // echo("Input : ".$input."<br>");
+    // echo("File Extension : ".$file_extension[$language]."<br><br>");
 
     $folder = "sessions/".strval(time());
 
@@ -29,8 +29,8 @@
             sleep(1);
         }
         
-        echo "<b> Output : </b><br>";
-        echo "<pre style='background: #aaaaaa; padding: 0.5em; border-radius: 1em;'>".file_get_contents($folder."/output.txt")."</pre>";
+        
+        echo file_get_contents($folder."/output.txt");
 
     }
     else{

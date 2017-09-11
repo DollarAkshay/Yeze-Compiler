@@ -22,6 +22,7 @@
     "angular-aria": "^1.6.5",
     "angular-material": "^1.1.4",
     "angular-material-data-table": "^0.10.10",
+    "angular-ui-codemirror": "^0.3.0",
     "codemirror": "^5.29.0",
     "font-awesome": "^4.7.0",
     "highcharts": "^5.0.14",
