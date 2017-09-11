@@ -53,6 +53,10 @@ body h5 {
     font-variant: small-caps;
 }
 
+md-divider {
+    border-top-color: #ff9800
+}
+
 
 /* --------------------------------------
     Page Styles
@@ -91,6 +95,7 @@ body h5 {
 #input-output-wrapper {
     margin: 2em;
     padding: 0em;
+    max-height: 400px;
 }
 
 .sub-heading {
@@ -103,7 +108,6 @@ body h5 {
 }
 
 #output-pre {
-    margin-top: 0.5em;
     padding: 0.5em;
     background: #bdbdbd;
 }

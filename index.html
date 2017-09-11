@@ -97,10 +97,13 @@
 				<md-divider></md-divider>
 				<textarea id="input-textarea" ng-model="input" flex></textarea>
 			</div>
-			<div id="output-wrapper" flex="50">
+			<div id="output-wrapper" flex="50" layout="column">
 				<span class="sub-heading small-caps" class="small-caps">Output</span>
 				<md-divider></md-divider>
-				<pre id="output-pre" ng-hide="output == null">{{output}}</pre>
+				<md-content>
+					<pre id="output-pre" ng-hide="output == null">{{output}}</pre>
+				</md-content>
+
 			</div>
 		</div>
 
