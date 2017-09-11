@@ -1,0 +1,30 @@
+{
+  "name": "mix-panel",
+  "version": "0.0.3",
+  "description": "Analytics tool to help track users and their cloud licences and accesses",
+  "main": "start.js",
+  "scripts": {
+    "start": "node start.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://akshay_aradhya_betsol@bitbucket.org/akshay_aradhya_betsol/mix-panel.git"
+  },
+  "keywords": [
+    "analytics"
+  ],
+  "author": "Akshay L Aradhya",
+  "license": "MIT",
+  "homepage": "https://bitbucket.org/akshay_aradhya_betsol/mix-panel#readme",
+  "dependencies": {
+    "angular": "^1.6.5",
+    "angular-animate": "^1.6.5",
+    "angular-aria": "^1.6.5",
+    "angular-material": "^1.1.4",
+    "angular-material-data-table": "^0.10.10",
+    "codemirror": "^5.29.0",
+    "font-awesome": "^4.7.0",
+    "highcharts": "^5.0.14",
+    "jquery": "^3.2.1"
+  }
+}

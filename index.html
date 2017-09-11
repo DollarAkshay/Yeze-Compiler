@@ -2,40 +2,65 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>YEZE Compiler</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>YEZE Compiler</title>
 
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/codemirror.css">
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="node_modules/codemirror/lib/codemirror.css">
+	<link rel="stylesheet" href="node_modules/codemirror/addon/fold/foldgutter.css">
+	<link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/node_modules/angular-material/angular-material.min.css">
+	<link rel="stylesheet" href="css/index.css">
 
 
 </head>
 
-<body>
-    <textarea id="code">
-a = [i for i in range(0, 10)]
-print a
-    </textarea>
+<body ng-app="indexApp" ng-controller="indexController" layout="column">
 
-    <!-- Scripts -->
-    <script src="js/codemirror/codemirror.js"></script>
-    <script src="js/codemirror/mode/python/python.js"></script>
-    <script src="js/codemirror/addon/edit/matchbrackets.js"></script>
-    <script>
-        var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
-            mode: {
-                name: "python",
-                version: 2,
-                singleLineStringErrors: false
-            },
-            lineNumbers: true,
-            indentUnit: 4,
-            matchBrackets: true
-        });
-    </script>
+	<md-content id="main" flex>
+
+		<md-toolbar>
+			<h1 class="md-toolbar-tools">
+				<img id="navbar-brand-logo" src="images/YEZE Compiler Logo.png">
+				<span id="navbar-brand-name" class="small-caps">YEZE Compiler</span>
+			</h1>
+		</md-toolbar>
+
+		<div id="code-wrapper" layout="row">
+			< <textarea id="code">
+				def fib(n): if n==1: return 1 else return fib(n-1) + fib(n-2) a = [i for i in range(0, 10)] print a
+				</textarea>
+		</div>
+
+
+	</md-content>
+
+
+
+
+
+
+	<!-- Scripts -->
+	<script src="node_modules/codemirror/lib/codemirror.js"></script>
+	<script src="node_modules/codemirror/mode/python/python.js"></script>
+	<script src="node_modules/codemirror/addon/edit/matchbrackets.js"></script>
+	<script src="node_modules/codemirror/addon/fold/foldcode.js"></script>
+	<script src="node_modules/codemirror/addon/fold/foldgutter.js"></script>
+	<script src="node_modules/codemirror/addon/fold/brace-fold.js"></script>
+	<script src="node_modules/codemirror/addon/fold/xml-fold.js"></script>
+	<script src="node_modules/codemirror/addon/fold/indent-fold.js"></script>
+	<script src="node_modules/codemirror/addon/fold/markdown-fold.js"></script>
+	<script src="node_modules/codemirror/addon/fold/comment-fold.js"></script>
+
+	<script src="/node_modules/jquery//dist/jquery.min.js"></script>
+	<script src="/node_modules/angular/angular.min.js" /></script>
+	<script src="/node_modules/angular-animate/angular-animate.min.js"></script>
+	<script src="/node_modules/angular-aria/angular-aria.min.js"></script>
+	<script src="/node_modules/angular-material/angular-material.js"></script>
+	<script src="js/index.js"></script>
 
 </body>
 
