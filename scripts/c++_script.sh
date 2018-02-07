@@ -2,13 +2,16 @@
 g++ --version | head -1
 
 g++ program.cpp -o binary  &> output.txt
-if [ -s output.txt ]
+if ! [ -s output.txt ]
 then
-	echo "Compile Error"
-else
-	./binary < input.txt &> output.txt
-fi
+	ulimit -f 64
+	(time timeout 1s ./binary < input.txt &> output.txt) &> status.txt
+	if [ $? -eq 124 ]; then 
+		echo "Timeout" > output.txt
+	fi
 
-echo "--------------------------------"
-cat output.txt
-echo "--------------------------------"
+	if ! [ -s output.txt ]
+	then
+		echo "Runtime Error" > output.txt
+	fi
+fi

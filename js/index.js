@@ -42,8 +42,9 @@ app.controller('indexController', function ($scope) {
 
 
 	$scope.sourceCode = "";
-	$scope.input = "";
+	$scope.input = "5";
 	$scope.output = null;
+	$scope.execTime = null
 
 	console.log($scope.sourceCode);
 
@@ -137,10 +138,12 @@ app.controller('indexController', function ($scope) {
 				"language": $scope.selectedLanguage.name,
 				"input": $scope.input
 			},
+			dataType: 'json',
 			success: function (data) {
 				console.log("Success");
 				console.log(data);
-				$scope.output = data;
+				$scope.output = data.output;
+				$scope.execTime = "( " + data.execTime + " sec )";
 				$scope.$apply();
 			}
 		});

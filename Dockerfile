@@ -18,4 +18,4 @@ RUN apt-get install -y gcc
 RUN apt-get install -y g++
 
 #Run the Script
-CMD /bin/bash script.sh
+CMD ./script.sh

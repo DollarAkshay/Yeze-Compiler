@@ -1,9 +1,15 @@
 #include <stdio.h>
+
 int main() {
+	
 	int i, n;
+	long long int sum = 0;
+	
 	scanf("%d", &n);
 	for (i=0; i<n; i++) {
-		printf("hello world\n");
+		sum += i;
 	}
+	
+	printf("Sum : %lld\n", sum);
 	return 0;
 }

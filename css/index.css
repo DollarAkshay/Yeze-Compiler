@@ -111,3 +111,8 @@ md-divider {
     padding: 0.5em;
     background: #bdbdbd;
 }
+
+#exec-time {
+    color: #888888;
+    margin-left: 0.5em;
+}

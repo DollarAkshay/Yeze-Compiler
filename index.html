@@ -98,7 +98,11 @@
 				<textarea id="input-textarea" ng-model="input" flex></textarea>
 			</div>
 			<div id="output-wrapper" flex="50" layout="column">
-				<span class="sub-heading small-caps" class="small-caps">Output</span>
+				<div>
+					<span class="sub-heading small-caps" class="small-caps">Output</span>
+					<span id="exec-time" flex>{{execTime}}</span>
+				</div>
+
 				<md-divider></md-divider>
 				<md-content>
 					<pre id="output-pre" ng-hide="output == null">{{output}}</pre>
